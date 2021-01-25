@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uRD-x6-kMq">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home WatchingVC-->
+        <scene sceneID="l7p-4T-e1g">
+            <objects>
+                <viewController storyboardIdentifier="HomeWatchingVC" id="uRD-x6-kMq" customClass="HomeWatchingVC" customModule="Knotive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mkg-Ov-9Sb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6WT-fZ-Yax">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" name="AppWhite"/>
+                                <color key="tintColor" name="AppWhite"/>
+                                <color key="sectionIndexBackgroundColor" name="AppWhite"/>
+                            </tableView>
+                            <stackView clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Ke-WC-v4J">
+                                <rect key="frame" x="0.0" y="44" width="414" height="88"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GmJ-Nd-FBp" userLabel="Nav View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZe-Ye-BSt">
+                                                <rect key="frame" x="20" y="7" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="2eW-eQ-Ef1"/>
+                                                    <constraint firstAttribute="width" constant="30" id="mmx-zy-5vB"/>
+                                                </constraints>
+                                                <state key="normal" image="icons8-menu"/>
+                                                <connections>
+                                                    <action selector="didTapMenu:" destination="Cge-6g-NZh" eventType="touchUpInside" id="7do-A3-8S6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ED-sf-ZyC">
+                                                <rect key="frame" x="364" y="7" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="1FR-en-CH5"/>
+                                                    <constraint firstAttribute="width" constant="30" id="CtN-zm-3SV"/>
+                                                </constraints>
+                                                <state key="normal" image="icons8-search"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watching" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4v-GW-cGw" customClass="EssentialLabel" customModule="Knotive" customModuleProvider="target">
+                                                <rect key="frame" x="157" y="7" width="100" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="ASD-oL-Nw1"/>
+                                                    <constraint firstAttribute="height" constant="30" id="Zij-Di-bug"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="17"/>
+                                                <color key="textColor" name="AppBlack"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="setTextStyle" value="extraLargeTitle"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="AppWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="4ED-sf-ZyC" firstAttribute="centerY" secondItem="GmJ-Nd-FBp" secondAttribute="centerY" id="20b-cG-WEc"/>
+                                            <constraint firstItem="f4v-GW-cGw" firstAttribute="centerX" secondItem="GmJ-Nd-FBp" secondAttribute="centerX" id="26j-C1-tkj"/>
+                                            <constraint firstAttribute="height" constant="44" id="3pz-UR-bil"/>
+                                            <constraint firstItem="dZe-Ye-BSt" firstAttribute="leading" secondItem="GmJ-Nd-FBp" secondAttribute="leading" constant="20" id="4Y6-Ud-aUC"/>
+                                            <constraint firstItem="f4v-GW-cGw" firstAttribute="centerY" secondItem="GmJ-Nd-FBp" secondAttribute="centerY" id="9tD-FD-egd"/>
+                                            <constraint firstItem="dZe-Ye-BSt" firstAttribute="centerY" secondItem="GmJ-Nd-FBp" secondAttribute="centerY" id="pUx-lw-01w"/>
+                                            <constraint firstAttribute="trailing" secondItem="4ED-sf-ZyC" secondAttribute="trailing" constant="20" id="uSU-A4-39x"/>
+                                        </constraints>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="way-fE-A3t">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                        <color key="backgroundColor" name="AppWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="uEb-UT-4f0"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fkg-Ye-euv">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" name="AppWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="hMd-2M-Wad"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kBI-Yh-0sZ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="AppWhite"/>
+                        <constraints>
+                            <constraint firstItem="6WT-fZ-Yax" firstAttribute="top" secondItem="kBI-Yh-0sZ" secondAttribute="top" id="9fw-dr-DHl"/>
+                            <constraint firstAttribute="trailing" secondItem="6WT-fZ-Yax" secondAttribute="trailing" id="NXm-MM-O7f"/>
+                            <constraint firstAttribute="trailing" secondItem="6Ke-WC-v4J" secondAttribute="trailing" id="aLq-RA-wCN"/>
+                            <constraint firstItem="6WT-fZ-Yax" firstAttribute="bottom" secondItem="kBI-Yh-0sZ" secondAttribute="bottom" id="fGm-8J-6rM"/>
+                            <constraint firstItem="6WT-fZ-Yax" firstAttribute="leading" secondItem="Mkg-Ov-9Sb" secondAttribute="leading" id="jIF-62-2qw"/>
+                            <constraint firstItem="6Ke-WC-v4J" firstAttribute="leading" secondItem="Mkg-Ov-9Sb" secondAttribute="leading" id="jR7-LQ-gfV"/>
+                            <constraint firstItem="6Ke-WC-v4J" firstAttribute="top" secondItem="kBI-Yh-0sZ" secondAttribute="top" id="veU-PE-Lho"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-tv-show-2" selectedImage="icons8-tv-show" id="gVL-gg-una">
+                        <inset key="imageInsets" minX="0.0" minY="38" maxX="0.0" maxY="38"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="navView" destination="6Ke-WC-v4J" id="gly-dA-ppP"/>
+                        <outlet property="navViewHeight" destination="hMd-2M-Wad" id="D4Y-gX-7Cl"/>
+                        <outlet property="watchingMenuCV" destination="way-fE-A3t" id="waO-HW-N1q"/>
+                        <outlet property="watchingTableView" destination="6WT-fZ-Yax" id="dYM-QO-oEE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cge-6g-NZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-365.21739130434787" y="-576.5625"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="f4v-GW-cGw">
+            <size key="intrinsicContentSize" width="77" height="23.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="icons8-menu" width="100" height="100"/>
+        <image name="icons8-search" width="100" height="100"/>
+        <image name="icons8-tv-show" width="100" height="100"/>
+        <image name="icons8-tv-show-2" width="100" height="100"/>
+        <namedColor name="AppBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="AppWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

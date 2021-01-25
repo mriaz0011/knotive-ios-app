@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountsTableCell" rowHeight="128" id="KGk-i7-Jjw" customClass="AccountsTableCell" customModule="Knotive" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8R1-wY-6tI">
+                        <rect key="frame" x="0.0" y="10" width="414" height="60"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IxD-Km-6Us" customClass="EssentialView" customModule="Knotive" customModuleProvider="target">
+                                <rect key="frame" x="57" y="0.0" width="300" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="n2h-ZM-Vyn">
+                                        <rect key="frame" x="20" y="10" width="260" height="40"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1h8-bf-avA">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="backgroundColor" name="AppGrayMedium"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="2ud-rS-V8g"/>
+                                                    <constraint firstAttribute="height" constant="40" id="gtY-iW-D1H"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jack Danial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7c-uQ-Okx">
+                                                <rect key="frame" x="60" y="0.0" width="140" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="AppBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5g-Gs-mrW">
+                                                <rect key="frame" x="220" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Kir-Ra-ouk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="10"/>
+                                                <state key="normal" title="Remove">
+                                                    <color key="titleColor" name="AppRed"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="removeAccountAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xHw-1q-M8H"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Xvu-Lf-bOe"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="AppWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="3vZ-MA-tkt"/>
+                                    <constraint firstAttribute="height" constant="60" id="VqA-jc-jQQ"/>
+                                    <constraint firstItem="n2h-ZM-Vyn" firstAttribute="centerY" secondItem="IxD-Km-6Us" secondAttribute="centerY" id="ftM-sn-NAm"/>
+                                    <constraint firstAttribute="trailing" secondItem="n2h-ZM-Vyn" secondAttribute="trailing" constant="20" id="uz4-nu-DS7"/>
+                                    <constraint firstItem="n2h-ZM-Vyn" firstAttribute="leading" secondItem="IxD-Km-6Us" secondAttribute="leading" constant="20" id="yMy-IR-KgF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IxD-Km-6Us" firstAttribute="centerX" secondItem="8R1-wY-6tI" secondAttribute="centerX" id="3Sa-NO-KLo"/>
+                            <constraint firstAttribute="height" constant="60" id="AcJ-hd-fzT"/>
+                            <constraint firstItem="IxD-Km-6Us" firstAttribute="centerY" secondItem="8R1-wY-6tI" secondAttribute="centerY" id="acY-70-xVf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="AppWhite"/>
+                <constraints>
+                    <constraint firstItem="8R1-wY-6tI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Cux-cX-Pma"/>
+                    <constraint firstItem="8R1-wY-6tI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KBf-XH-qf8"/>
+                    <constraint firstItem="8R1-wY-6tI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fn8-4E-BoK"/>
+                    <constraint firstAttribute="trailing" secondItem="8R1-wY-6tI" secondAttribute="trailing" id="g9M-CD-efq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="profilePhotoImg" destination="1h8-bf-avA" id="caE-s3-cif"/>
+                <outlet property="removeBtn" destination="W5g-Gs-mrW" id="M8K-5M-TGP"/>
+                <outlet property="userNameLbl" destination="o7c-uQ-Okx" id="e4o-eN-jlx"/>
+            </connections>
+            <point key="canvasLocation" x="155.07246376811597" y="4.6875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="AppGrayMedium">
+            <color red="0.67400002479553223" green="0.67400002479553223" blue="0.67400002479553223" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="AppRed">
+            <color red="0.99699997901916504" green="0.2720000147819519" blue="0.22699999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="AppWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

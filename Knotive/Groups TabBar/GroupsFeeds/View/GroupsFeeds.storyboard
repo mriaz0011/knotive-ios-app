@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uRD-x6-kMq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Groups FeedsVC-->
+        <scene sceneID="l7p-4T-e1g">
+            <objects>
+                <viewController storyboardIdentifier="GroupsFeedsVC" id="uRD-x6-kMq" customClass="GroupsFeedsVC" customModule="Knotive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mkg-Ov-9Sb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZe-Ye-BSt">
+                                <rect key="frame" x="40" y="44" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Menu"/>
+                                <connections>
+                                    <action selector="didTapMenu:" destination="Cge-6g-NZh" eventType="touchUpInside" id="7do-A3-8S6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0y-lf-dua">
+                                <rect key="frame" x="160" y="433" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Groups Feeds"/>
+                                <connections>
+                                    <action selector="goToTab2:" destination="uRD-x6-kMq" eventType="touchUpInside" id="BKw-kK-ycl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kBI-Yh-0sZ"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-user-groups-1" selectedImage="icons8-user-groups" id="gVL-gg-una">
+                        <inset key="imageInsets" minX="0.0" minY="38" maxX="0.0" maxY="38"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="oPp-t5-a4h" kind="presentation" identifier="HomeFeedsSearchVCSegueID" animates="NO" id="UmX-Ep-LXV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cge-6g-NZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-365.21739130434787" y="-576.5625"/>
+        </scene>
+        <!--Groups Feeds SearchVC-->
+        <scene sceneID="Kia-si-i9X">
+            <objects>
+                <viewController storyboardIdentifier="GroupsFeedsSearchVC" modalPresentationStyle="fullScreen" id="oPp-t5-a4h" customClass="GroupsFeedsSearchVC" customModule="Knotive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v8a-zK-l8P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re8-1C-o5H">
+                                <rect key="frame" x="120" y="433" width="148" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Groups Feeds Search"/>
+                                <connections>
+                                    <action selector="unwindToSelectedVC:" destination="oPp-t5-a4h" eventType="touchUpInside" id="jKx-dl-cy4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="u1O-xv-E3h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="20A-Ad-11e"/>
+                    <connections>
+                        <segue destination="2Dk-d6-uQH" kind="unwind" identifier="unwindHomeFeedsVC" animates="NO" unwindAction="unwindToHomeFeeds:" id="LvR-BR-YRK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mSB-G0-Vnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2Dk-d6-uQH" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="549" y="-577"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-user-groups" width="100" height="100"/>
+        <image name="icons8-user-groups-1" width="100" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

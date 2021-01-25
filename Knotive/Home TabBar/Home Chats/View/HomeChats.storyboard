@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sd7-cq-buw">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home ChatsVC-->
+        <scene sceneID="JZ3-hr-OEB">
+            <objects>
+                <viewController id="sd7-cq-buw" customClass="HomeChatsVC" customModule="Knotive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CJS-og-M5I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="14N-fo-lYt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" name="AppWhite"/>
+                                <color key="tintColor" name="AppWhite"/>
+                                <color key="sectionIndexBackgroundColor" name="AppWhite"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vwC-4i-EW4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="178"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bar-Sd-n3K" userLabel="Nav View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Wd-MZ-6QN">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbp-L7-6dN">
+                                                        <rect key="frame" x="20" y="7" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="A6f-rF-gfY"/>
+                                                            <constraint firstAttribute="width" constant="30" id="OZP-t7-uGH"/>
+                                                        </constraints>
+                                                        <state key="normal" image="icons8-menu"/>
+                                                        <connections>
+                                                            <action selector="didTapMenu:" destination="sd7-cq-buw" eventType="touchUpInside" id="Kk5-ta-P4k"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AT-PA-Z3K">
+                                                        <rect key="frame" x="364" y="7" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="Eyl-Vv-VOu"/>
+                                                            <constraint firstAttribute="width" constant="30" id="hPZ-4w-6oZ"/>
+                                                        </constraints>
+                                                        <state key="normal" image="icons8-add-user-male"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HN6-td-VlD" customClass="EssentialLabel" customModule="Knotive" customModuleProvider="target">
+                                                        <rect key="frame" x="177" y="11.5" width="60" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="WnO-zd-s2k"/>
+                                                            <constraint firstAttribute="width" constant="60" id="tGX-60-L2j"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="17"/>
+                                                        <color key="textColor" name="AppBlack"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="setTextStyle" value="extraLargeTitle"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Sbp-L7-6dN" firstAttribute="centerY" secondItem="6Wd-MZ-6QN" secondAttribute="centerY" id="9Yp-W5-xkH"/>
+                                                    <constraint firstItem="9AT-PA-Z3K" firstAttribute="centerY" secondItem="6Wd-MZ-6QN" secondAttribute="centerY" id="Dcc-Wn-Gwz"/>
+                                                    <constraint firstItem="Sbp-L7-6dN" firstAttribute="leading" secondItem="6Wd-MZ-6QN" secondAttribute="leading" constant="20" id="HfB-k1-aox"/>
+                                                    <constraint firstItem="HN6-td-VlD" firstAttribute="centerY" secondItem="6Wd-MZ-6QN" secondAttribute="centerY" id="aa9-fF-hcn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9AT-PA-Z3K" secondAttribute="trailing" constant="20" id="h9D-xw-6sW"/>
+                                                    <constraint firstItem="HN6-td-VlD" firstAttribute="centerX" secondItem="6Wd-MZ-6QN" secondAttribute="centerX" id="kw3-IC-IFM"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" name="AppWhite"/>
+                                        <color key="tintColor" name="AppWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="3IQ-jc-SMM"/>
+                                            <constraint firstAttribute="bottom" secondItem="6Wd-MZ-6QN" secondAttribute="bottom" id="Kca-6w-fhL"/>
+                                            <constraint firstItem="6Wd-MZ-6QN" firstAttribute="leading" secondItem="Bar-Sd-n3K" secondAttribute="leading" id="VlN-9g-xKY"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Wd-MZ-6QN" secondAttribute="trailing" id="lCq-7h-A7O"/>
+                                            <constraint firstItem="6Wd-MZ-6QN" firstAttribute="top" secondItem="Bar-Sd-n3K" secondAttribute="top" id="nKp-OW-iWb"/>
+                                        </constraints>
+                                    </view>
+                                    <searchBar clipsSubviews="YES" contentMode="redraw" placeholder="Search contact" translatesAutoresizingMaskIntoConstraints="NO" id="aaK-aC-0RD">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                        <color key="backgroundColor" name="AppWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="tkQ-QI-WHF"/>
+                                        </constraints>
+                                        <color key="tintColor" name="AppGrayVeryStrong"/>
+                                        <color key="barTintColor" name="AppWhite"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="esE-zo-MdZ">
+                                        <rect key="frame" x="0.0" y="88" width="414" height="90"/>
+                                        <color key="backgroundColor" name="AppWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="gaU-Xc-C0y"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="daA-ZW-UWR">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="uDD-3P-4VS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e8d-ld-HIj"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="14N-fo-lYt" secondAttribute="trailing" id="4R7-mT-VwH"/>
+                            <constraint firstAttribute="trailing" secondItem="vwC-4i-EW4" secondAttribute="trailing" id="6Oq-Ai-wxX"/>
+                            <constraint firstItem="e8d-ld-HIj" firstAttribute="bottom" secondItem="14N-fo-lYt" secondAttribute="bottom" id="NwW-gb-vuX"/>
+                            <constraint firstItem="14N-fo-lYt" firstAttribute="leading" secondItem="CJS-og-M5I" secondAttribute="leading" id="VuE-TI-lcG"/>
+                            <constraint firstItem="vwC-4i-EW4" firstAttribute="top" secondItem="e8d-ld-HIj" secondAttribute="top" id="Wjj-BN-QT4"/>
+                            <constraint firstItem="vwC-4i-EW4" firstAttribute="leading" secondItem="CJS-og-M5I" secondAttribute="leading" id="YlV-Bo-xqa"/>
+                            <constraint firstItem="14N-fo-lYt" firstAttribute="top" secondItem="e8d-ld-HIj" secondAttribute="top" id="vdQ-GY-i2r"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-topic" selectedImage="icons8-speech-bubble" id="SlC-X6-3m1">
+                        <inset key="imageInsets" minX="0.0" minY="38" maxX="0.0" maxY="38"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="friendsFavouriteCV" destination="esE-zo-MdZ" id="oGU-LC-sWU"/>
+                        <outlet property="friendsTableView" destination="14N-fo-lYt" id="TeK-DU-3z6"/>
+                        <outlet property="searchBar" destination="aaK-aC-0RD" id="gyq-va-VQT"/>
+                        <outlet property="topStack" destination="vwC-4i-EW4" id="C0k-b0-Uda"/>
+                        <outlet property="topViewHeight" destination="uDD-3P-4VS" id="zFC-Fj-GyC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lh0-32-BVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456.52173913043481" y="-646.20535714285711"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="HN6-td-VlD">
+            <size key="intrinsicContentSize" width="46.5" height="23.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="icons8-add-user-male" width="30" height="30"/>
+        <image name="icons8-menu" width="100" height="100"/>
+        <image name="icons8-speech-bubble" width="100" height="100"/>
+        <image name="icons8-topic" width="100" height="100"/>
+        <namedColor name="AppBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="AppGrayVeryStrong">
+            <color red="0.49900001287460327" green="0.49900001287460327" blue="0.49900001287460327" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="AppWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendsMenuCell" id="gTV-IL-0wX" customClass="FriendsMenuCell" customModule="Knotive" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn8-Q3-qrl" customClass="ItemMenuLabel" customModule="Knotive" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="eD0-hI-Z5i"/>
+                            <constraint firstAttribute="width" constant="80" id="oEK-RT-RFk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="AppBlack"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="setTextStyle" value="mediumTitle"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tn-fl-Kre">
+                        <rect key="frame" x="15" y="37" width="50" height="3"/>
+                        <color key="backgroundColor" name="AppBlack"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="DwH-h8-qqA"/>
+                            <constraint firstAttribute="height" constant="3" id="QoM-Pl-RJO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="AppBlack"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Nn8-Q3-qrl" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="2xT-tg-fCX"/>
+                <constraint firstItem="7tn-fl-Kre" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ADz-3m-W0d"/>
+                <constraint firstItem="Nn8-Q3-qrl" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="MfX-gK-z54"/>
+                <constraint firstAttribute="bottom" secondItem="7tn-fl-Kre" secondAttribute="bottom" constant="4" id="bNC-2M-d1e"/>
+            </constraints>
+            <connections>
+                <outlet property="itemMenuLabel" destination="Nn8-Q3-qrl" id="jcT-iC-5Se"/>
+                <outlet property="selectedMenuLabel" destination="7tn-fl-Kre" id="fIb-KA-jJk"/>
+            </connections>
+            <point key="canvasLocation" x="28.985507246376812" y="61.607142857142854"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
